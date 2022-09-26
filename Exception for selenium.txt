@@ -1,0 +1,16 @@
+List of Important Exceptions in Selenium:
+---------------------------------------------------------------
+WebDriverException
+1. NoSuchElementException
+2.StaleElementReferenceException
+3. UnhandledAlertException 
+4. InvalidElementStateException  
+5.ElementNotVisibleException
+6. NoSuchFrameException
+7. NoSuchSessionException
+8.UnreachableBrowserException
+9.NoSuchWindowException
+10. ElementNotInteractableException
+11. TimeoutException 
+12. SessionNotCreatedException
+13.JavascriptException
