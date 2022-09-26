@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+ 
+      <classes>
+         <class name ="Login_Test.bothcorrect"></class>
+           <class name ="Login_Test.bothnotcorrect"></class>
+          <class name ="Login_Test.unamecorrect"></class>
+         <class name ="Login_Test.upasswordcorrect"></class>
+      </classes>
+   </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+<!-- using for classes -->

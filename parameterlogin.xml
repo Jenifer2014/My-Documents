@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite">
+  <test thread-count="5" name="Bothcorrect">
+ <parameter name="Usermail" value="jeniferjayaraj12345@gmail.com"></parameter>
+<parameter name="Userpassword" value="jeni@1991"></parameter>
+      <classes>
+         <class name ="Login_Test.bothcorrect"></class>
+      </classes>
+   </test> <!-- Test -->
+
+<test thread-count="5" name="Bothnotcorrect">
+ <parameter name="Usermail" value="jeniferjayaraj@gmail.com"></parameter>
+<parameter name="Userpassword" value="jeni@2991"></parameter>
+      <classes>
+         <class name ="Login_Test.bothnotcorrect"></class>
+      </classes>
+   </test>
+
+<test thread-count="5" name="unamecorrect">
+ <parameter name="Usermail" value="jeniferjayaraj12345@gmail.com"></parameter>
+<parameter name="Userpassword" value="jeni@991"></parameter>
+      <classes>
+         <class name ="Login_Test.unamecorrect"></class>
+      </classes>
+   </test>
+
+<test thread-count="5" name="upasswordcorrect">
+ <parameter name="Usermail" value="jeniferjayaraj123@gmail.com"></parameter>
+<parameter name="Userpassword" value="jeni@1991"></parameter>
+      <classes>
+         <class name ="Login_Test.upasswordcorrect"></class>
+      </classes>
+   </test>
+</suite> 

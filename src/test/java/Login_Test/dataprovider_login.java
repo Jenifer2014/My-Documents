@@ -1,0 +1,50 @@
+package Login_Test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class dataprovider_login {
+	
+	 WebDriver driver;
+	 String [][]data= {
+			 {"jeniferjayaraj12345@gmail.com","jeni@1991"},
+			 {"jeniferjayaraj12345@gmail.com","jeni@1991"},
+			 {"jeniferjayaraj12345@gmail.com","jeni@1991"},
+			 {"jeniferjayaraj12345@gmail.com","jeni@1991"},
+			 };
+	 
+	 @DataProvider(name="loginvalue")
+	 public String[][] login_value()
+	 {
+		 return data;
+	 }
+	 
+	@Test(dataProvider="loginvalue")
+	  public void bothcorrect_uname_password(String email,String password) throws InterruptedException
+	     {
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		driver.get("https://letcode.in/");
+		driver.findElement(By.xpath("//*[@id=\"navbar-menu\"]/div[2]/div/div/a[2]")).click();
+		
+		WebElement uname=driver.findElement(By.name("email"));
+		uname.sendKeys(email);
+		
+		WebElement upassword=driver.findElement(By.name("password"));
+		upassword.sendKeys(password);
+		
+		driver.findElement(By.xpath("/html/body/app-root/app-signin/div/div/div/div/form/div[3]/p/button")).click();
+		
+		Thread.sleep(9000);
+	    driver.findElement(By.xpath("//*[@id=\"navbar-menu\"]/div[2]/div/div/a")).click();
+	    
+	    driver.close();
+	    }
+}

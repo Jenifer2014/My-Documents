@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Bothcorrect(failed)">
+    <parameter name="Usermail" value="jeniferjayaraj12345@gmail.com"/>
+    <parameter name="Userpassword" value="jeni@1991"/>
+    <classes>
+      <class name="Login_Test.bothcorrect">
+        <methods>
+          <include name="bothcorrect_uname_password"/>
+        </methods>
+      </class> <!-- Login_Test.bothcorrect -->
+    </classes>
+  </test> <!-- Bothcorrect(failed) -->
+  <test thread-count="5" name="Bothnotcorrect(failed)">
+    <parameter name="Usermail" value="jeniferjayaraj@gmail.com"/>
+    <parameter name="Userpassword" value="jeni@2991"/>
+    <classes>
+      <class name="Login_Test.bothnotcorrect">
+        <methods>
+          <include name="bothwrong_uname_password"/>
+        </methods>
+      </class> <!-- Login_Test.bothnotcorrect -->
+    </classes>
+  </test> <!-- Bothnotcorrect(failed) -->
+  <test thread-count="5" name="unamecorrect(failed)">
+    <parameter name="Usermail" value="jeniferjayaraj12345@gmail.com"/>
+    <parameter name="Userpassword" value="jeni@991"/>
+    <classes>
+      <class name="Login_Test.unamecorrect">
+        <methods>
+          <include name="correct_uname_password"/>
+        </methods>
+      </class> <!-- Login_Test.unamecorrect -->
+    </classes>
+  </test> <!-- unamecorrect(failed) -->
+  <test thread-count="5" name="upasswordcorrect(failed)">
+    <parameter name="Usermail" value="jeniferjayaraj123@gmail.com"/>
+    <parameter name="Userpassword" value="jeni@1991"/>
+    <classes>
+      <class name="Login_Test.bothcorrect">
+        <methods>
+          <include name="bothcorrect_uname_password"/>
+        </methods>
+      </class> <!-- Login_Test.bothcorrect -->
+    </classes>
+  </test> <!-- upasswordcorrect(failed) -->
+</suite> <!-- Failed suite [Suite] -->
